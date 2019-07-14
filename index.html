@@ -4,15 +4,41 @@
     <title>Angela's Website</title>
     <meta name="viewport" content="initial-scale=1" />
     <style>
+      html,
+      body {
+        height: 100%;
+      }
       body {
         margin: 0;
-        background-color: #000;
+        background-color: white;
+        color: black;
+        font-family: sans-serif;
       }
-      .page {
+      header {
+        top: 50%;
+        padding: 1em 0;
+        text-align: center;
+        position: absolute;
+        background: white;
+        width: 100%;
+      }
+      main {
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        height: 100vh;
+        justify-content: space-around;
+        height: 100%;
+        max-width: 500px;
+      }
+      .page {
+        position: relative;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%; */
+      }
+      video {
+        width: 100%;
       }
       .main-image {
         display: block;
@@ -21,8 +47,13 @@
     </style>
   </head>
   <body>
-    <div class="page">
-      <img class="main-image" src="volcano.gif" />
-    </div>
+    <main>
+      <div class="page">
+        <header>Angela Higham Fan Club (Official)</header>
+        <video preload="auto" autoplay loop muted playsinline>
+          <source src="fan-club.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </main>
   </body>
 </html>
